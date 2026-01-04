@@ -1,0 +1,55 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Core palette */
+  --page-bg: #f0f4f8;
+  --surface: #fafbfc;
+  --card: #ffffff;
+  --ink: #1a1a1a;
+  --muted: #6b7280;
+  --stroke: rgba(0, 0, 0, 0.08);
+  
+  /* Pastels */
+  --pastel-lilac: #e8e4f5;
+  --pastel-mint: #e0f5f0;
+  --pastel-sand: #f5f0e8;
+  
+  /* Surface tints (very light) */
+  --surface-lilac: rgba(142, 123, 255, 0.08);
+  --surface-mint: rgba(90, 200, 140, 0.08);
+  --surface-sand: rgba(240, 210, 140, 0.10);
+  
+  /* Accent (GameLayer purple/blue) */
+  --accent: #6366f1;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: var(--page-bg);
+  color: var(--ink);
+  line-height: 1.6;
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+  line-height: 1.2;
+  color: var(--ink);
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
