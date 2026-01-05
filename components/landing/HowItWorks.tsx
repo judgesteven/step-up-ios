@@ -98,7 +98,7 @@ export default function HowItWorks() {
           </div>
           
           <p className="text-sm text-[var(--muted)] max-w-2xl mx-auto mt-8 text-center">
-            Activity is tracked automatically via Apple Health (HealthKit) to ensure accurate and consistent step data.
+            Activity is tracked automatically via Apple Health (HealthKit) to ensure accurate and consistent data.
           </p>
         </div>
       </Container>
