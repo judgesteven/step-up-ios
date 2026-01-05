@@ -14,6 +14,11 @@ export default function SiteHeader() {
           <div className="flex items-center justify-between h-20">
             {/* Logo */}
             <div className="flex items-center">
+              <img 
+                src="/images/gamelayer_logo.png" 
+                alt="GameLayer" 
+                className="h-8 w-auto"
+              />
             </div>
 
             {/* Desktop Navigation */}
