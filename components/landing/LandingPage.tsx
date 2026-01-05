@@ -47,30 +47,29 @@ export default function LandingPage() {
         {/* Footer */}
         <footer className="py-8 border-t border-[var(--stroke)] bg-[var(--surface)]">
           <Container>
-            <div className="space-y-4">
-              {/* Logo and Company Name */}
-              <div className="flex items-center justify-center gap-2 mb-4">
+            <div className="text-left space-y-2">
+              {/* Logo */}
+              <div>
                 <img 
                   src="/images/gamelayer_logo.png" 
                   alt="GameLayer" 
-                  className="h-6 w-auto"
+                  className="h-5 w-auto"
                 />
-                <span className="text-base font-semibold text-[var(--ink)]">GameLayer</span>
               </div>
               
               {/* Company Registration */}
-              <div className="text-center text-sm text-[var(--ink)]">
-                <p>Company Registration 2503589-01 FINLAND</p>
-              </div>
+              <p className="text-sm text-[var(--muted)]">
+                Company Registration 2503589-01 FINLAND
+              </p>
               
               {/* Copyright and Contact */}
-              <div className="flex flex-col md:flex-row items-center justify-between text-sm text-[var(--ink)] gap-2">
-                <p>© 2012 - 2025 All rights reserved</p>
+              <div className="flex items-center justify-between text-sm text-[var(--muted)]">
+                <span>© 2012 - 2026 All rights reserved</span>
                 <a 
-                  href="mailto:contact@gamelayer.co" 
-                  className="hover:opacity-80 transition-opacity"
+                  href="mailto:hello@gamelayer.co?subject=Step-Up%20Query" 
+                  className="hover:opacity-80 transition-opacity hover:text-[var(--ink)]"
                 >
-                  Contact Us - contact@gamelayer.co
+                  Contact Us
                 </a>
               </div>
             </div>
