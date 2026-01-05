@@ -48,13 +48,19 @@ export default function LandingPage() {
         <footer className="py-8 border-t border-[var(--stroke)] bg-[var(--surface)]">
           <Container>
             <div className="text-left space-y-2">
-              {/* Logo */}
-              <div>
+              {/* Logo and Contact Us */}
+              <div className="flex items-center justify-between">
                 <img 
                   src="/images/gamelayer_logo.png" 
                   alt="GameLayer" 
                   className="h-5 w-auto"
                 />
+                <a 
+                  href="mailto:hello@gamelayer.co?subject=Step-Up%20Query" 
+                  className="text-sm text-[var(--muted)] hover:opacity-80 transition-opacity hover:text-[var(--ink)]"
+                >
+                  Contact Us
+                </a>
               </div>
               
               {/* Company Registration */}
@@ -62,14 +68,36 @@ export default function LandingPage() {
                 Company Registration 2503589-01 FINLAND
               </p>
               
-              {/* Copyright and Contact */}
-              <div className="flex items-center justify-between text-sm text-[var(--muted)]">
-                <span>© 2012 - 2026 All rights reserved</span>
+              {/* Copyright */}
+              <p className="text-sm text-[var(--muted)]">
+                © 2012 - 2026 All rights reserved
+              </p>
+              
+              {/* Legal Links */}
+              <div className="flex flex-wrap gap-4 text-sm text-[var(--muted)]">
                 <a 
-                  href="mailto:hello@gamelayer.co?subject=Step-Up%20Query" 
+                  href="https://gamelayer.io/terms-of-service" 
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="hover:opacity-80 transition-opacity hover:text-[var(--ink)]"
                 >
-                  Contact Us
+                  Terms of Service
+                </a>
+                <a 
+                  href="https://gamelayer.io/privacy-policy" 
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:opacity-80 transition-opacity hover:text-[var(--ink)]"
+                >
+                  Privacy Policy
+                </a>
+                <a 
+                  href="https://gamelayer.io/dpa" 
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:opacity-80 transition-opacity hover:text-[var(--ink)]"
+                >
+                  DPA
                 </a>
               </div>
             </div>
