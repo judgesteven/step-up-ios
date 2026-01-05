@@ -47,34 +47,37 @@ export default function LandingPage() {
         {/* Footer */}
         <footer className="py-8 border-t border-[var(--stroke)] bg-[var(--surface)]">
           <Container>
-            <div className="text-left space-y-2">
-              {/* Logo and Contact Us */}
-              <div className="flex items-center justify-between">
-                <img 
-                  src="/images/gamelayer_logo.png" 
-                  alt="GameLayer" 
-                  className="h-5 w-auto"
-                />
-                <a 
-                  href="mailto:hello@gamelayer.co?subject=Step-Up%20Query" 
-                  className="text-sm text-[var(--muted)] hover:opacity-80 transition-opacity hover:text-[var(--ink)]"
-                >
-                  Contact Us
-                </a>
+            <div className="flex flex-col md:flex-row justify-between gap-6">
+              {/* Left side: Logo, Company Info, Copyright */}
+              <div className="text-left space-y-2">
+                {/* Logo and Contact Us */}
+                <div className="flex items-center justify-between md:justify-start gap-4">
+                  <img 
+                    src="/images/gamelayer_logo.png" 
+                    alt="GameLayer" 
+                    className="h-5 w-auto"
+                  />
+                  <a 
+                    href="mailto:hello@gamelayer.co?subject=Step-Up%20Query" 
+                    className="text-sm text-[var(--muted)] hover:opacity-80 transition-opacity hover:text-[var(--ink)]"
+                  >
+                    Contact Us
+                  </a>
+                </div>
+                
+                {/* Company Registration */}
+                <p className="text-sm text-[var(--muted)]">
+                  Company Registration 2503589-01 FINLAND
+                </p>
+                
+                {/* Copyright */}
+                <p className="text-sm text-[var(--muted)]">
+                  © 2012 - 2026 All rights reserved
+                </p>
               </div>
               
-              {/* Company Registration */}
-              <p className="text-sm text-[var(--muted)]">
-                Company Registration 2503589-01 FINLAND
-              </p>
-              
-              {/* Copyright */}
-              <p className="text-sm text-[var(--muted)]">
-                © 2012 - 2026 All rights reserved
-              </p>
-              
-              {/* Legal Links */}
-              <div className="flex flex-wrap gap-4 text-sm text-[var(--muted)]">
+              {/* Right side: Legal Links */}
+              <div className="flex flex-wrap gap-4 text-sm text-[var(--muted)] justify-start md:justify-end items-start">
                 <a 
                   href="https://gamelayer.io/terms-of-service" 
                   target="_blank"
