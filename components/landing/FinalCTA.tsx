@@ -64,7 +64,7 @@ export default function FinalCTA() {
                     type="submit"
                     className="bg-[var(--accent)] text-white px-10 py-4 font-bold text-lg rounded-[9999px] hover:opacity-90 transition-all duration-200"
                   >
-                    Request Access
+                    Learn More
                   </button>
                 </div>
                 <p className="text-sm text-[var(--ink)]">

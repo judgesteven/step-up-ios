@@ -49,7 +49,7 @@ export default function Hero() {
                     
                     <div className="flex flex-wrap gap-4 pt-4">
                       <Button href="#final-cta" variant="primary" className="text-lg px-10 py-4 font-bold !rounded-[9999px]">
-                        Request Access
+                        Learn More
                       </Button>
                     </div>
                   </div>
@@ -70,7 +70,7 @@ export default function Hero() {
           {/* Trust line below lilac panel */}
           <div className="px-[56px] mt-6">
             <p className="text-sm text-[var(--ink)]">
-              Built for public health programmes - Powered by <span className="font-semibold">GameLayer</span>
+              Powered by <span className="font-semibold">GameLayer</span>
             </p>
           </div>
         </div>

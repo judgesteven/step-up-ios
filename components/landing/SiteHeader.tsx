@@ -40,7 +40,7 @@ export default function SiteHeader() {
             {/* CTA + Mobile Menu */}
             <div className="flex items-center gap-4">
               <Button href="#final-cta" variant="primary" className="!rounded-[9999px]">
-                Request Access
+                Learn More
               </Button>
               
               {/* Mobile Hamburger */}
