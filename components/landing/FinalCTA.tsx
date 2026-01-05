@@ -245,7 +245,7 @@ export default function FinalCTA() {
                     disabled={status === 'submitting'}
                     className="bg-[var(--accent)] text-white px-10 py-4 font-bold text-lg rounded-[9999px] hover:opacity-90 transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed"
                   >
-                    {status === 'submitting' ? 'Sending…' : 'Learn More'}
+                    {status === 'submitting' ? 'Sending…' : 'Submit'}
                   </button>
                 </div>
                 <p className="text-sm text-[var(--ink)]">
