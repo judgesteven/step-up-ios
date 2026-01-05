@@ -19,6 +19,10 @@ export default function FAQ() {
       answer: 'Step-Up only collects the data required to support the programme and track activity. Participants must explicitly grant permission to connect their device in order to read step count data. Data handling and privacy can be aligned with organisational and public-sector requirements.',
     },
     {
+      question: 'How is activity data collected?',
+      answer: 'Step-Up uses step data collected directly from Apple Health (HealthKit). Participants connect HealthKit once, allowing Step-Up to read step counts from trusted sources such as iPhone sensors or connected wearables. Activity data is not entered manually, helping ensure accuracy, fairness, and consistency across the programme.',
+    },
+    {
       question: 'How much does Step-Up cost?',
       answer: 'Pricing depends on the number of participants and the level of bespoke content or configuration required. As an example, a small organisation using a standard version of Step-Up would typically pay around €99 per month, with discounts available for annual upfront commitments.',
     },
