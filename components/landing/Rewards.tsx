@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function Rewards() {
   return (
-    <section id="rewards">
+    <section id="recognition">
       <div className="mx-auto max-w-[1120px] px-6 md:px-8 lg:px-12">
         <div className="rounded-[24px] border border-[var(--stroke)] bg-white px-[40px] py-[48px]">
           {/* Section title and description */}

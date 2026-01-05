@@ -10,7 +10,7 @@ export default function Squads() {
   ];
 
   return (
-    <section id="squads">
+    <section id="community">
       <Container>
         <div className="grid md:grid-cols-[1.35fr_1fr] gap-12 items-center">
           {/* Left: Copy */}

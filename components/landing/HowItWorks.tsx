@@ -30,7 +30,7 @@ export default function HowItWorks() {
   ];
 
   return (
-    <section id="how-it-works">
+    <section id="getting-started">
       <Container>
         <div className="rounded-[24px] border border-[var(--stroke)] bg-white px-[40px] py-[48px]">
           <div className="text-center mb-16">

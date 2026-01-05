@@ -23,19 +23,19 @@ export default function SiteHeader() {
 
             {/* Desktop Navigation */}
             <nav className="hidden md:flex items-center gap-8">
-              <a href="#how-it-works" className="text-[var(--ink)] hover:opacity-80 transition-colors">
+              <a href="#getting-started" className="text-[var(--ink)] hover:opacity-80 transition-colors">
                 Getting started
               </a>
-              <a href="#features" className="text-[var(--ink)] hover:opacity-80 transition-colors">
+              <a href="#engagement" className="text-[var(--ink)] hover:opacity-80 transition-colors">
                 Engagement
               </a>
-              <a href="#squads" className="text-[var(--ink)] hover:opacity-80 transition-colors">
+              <a href="#community" className="text-[var(--ink)] hover:opacity-80 transition-colors">
                 Community
               </a>
-              <a href="#rewards" className="text-[var(--ink)] hover:opacity-80 transition-colors">
+              <a href="#recognition" className="text-[var(--ink)] hover:opacity-80 transition-colors">
                 Recognition
               </a>
-              <a href="#screenshots" className="text-[var(--ink)] hover:opacity-80 transition-colors">
+              <a href="#in-action" className="text-[var(--ink)] hover:opacity-80 transition-colors">
                 In action
               </a>
               <a href="#faq" className="text-[var(--ink)] hover:opacity-80 transition-colors">
@@ -71,35 +71,35 @@ export default function SiteHeader() {
             <div className="md:hidden absolute left-0 right-0 top-20 bg-white border border-[var(--stroke)] rounded-b-3xl shadow-lg">
               <nav className="flex flex-col py-4">
                 <a
-                  href="#how-it-works"
+                  href="#getting-started"
                   onClick={() => setMobileMenuOpen(false)}
                   className="px-6 py-3 text-[var(--ink)] hover:opacity-80 hover:bg-[var(--surface)] transition-colors"
                 >
                   Getting started
                 </a>
                 <a
-                  href="#features"
+                  href="#engagement"
                   onClick={() => setMobileMenuOpen(false)}
                   className="px-6 py-3 text-[var(--ink)] hover:opacity-80 hover:bg-[var(--surface)] transition-colors"
                 >
                   Engagement
                 </a>
                 <a
-                  href="#squads"
+                  href="#community"
                   onClick={() => setMobileMenuOpen(false)}
                   className="px-6 py-3 text-[var(--ink)] hover:opacity-80 hover:bg-[var(--surface)] transition-colors"
                 >
                   Community
                 </a>
                 <a
-                  href="#rewards"
+                  href="#recognition"
                   onClick={() => setMobileMenuOpen(false)}
                   className="px-6 py-3 text-[var(--ink)] hover:opacity-80 hover:bg-[var(--surface)] transition-colors"
                 >
                   Recognition
                 </a>
                 <a
-                  href="#screenshots"
+                  href="#in-action"
                   onClick={() => setMobileMenuOpen(false)}
                   className="px-6 py-3 text-[var(--ink)] hover:opacity-80 hover:bg-[var(--surface)] transition-colors"
                 >
