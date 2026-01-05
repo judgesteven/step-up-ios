@@ -4,6 +4,21 @@ import React, { useState, useEffect } from 'react';
 import Container from '../ui/Container';
 import Card from '../ui/Card';
 
+const FREE_EMAIL_DOMAINS = [
+  'gmail.com',
+  'googlemail.com',
+  'outlook.com',
+  'hotmail.com',
+  'live.com',
+  'yahoo.com',
+  'icloud.com',
+  'me.com',
+  'proton.me',
+  'protonmail.com',
+  'aol.com',
+  'gmx.com',
+];
+
 export default function FinalCTA() {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
@@ -11,9 +26,29 @@ export default function FinalCTA() {
   const [honeypot, setHoneypot] = useState('');
   const [status, setStatus] = useState<'idle' | 'submitting'>('idle');
   const [toast, setToast] = useState<{ message: string; type: 'success' | 'error' } | null>(null);
+  const [formShownAt, setFormShownAt] = useState<number | null>(null);
+  const [showWorkEmailWarning, setShowWorkEmailWarning] = useState(false);
+  const [hasConfirmedFreeEmail, setHasConfirmedFreeEmail] = useState(false);
+
+  // Set form shown timestamp on mount
+  useEffect(() => {
+    setFormShownAt(Date.now());
+  }, []);
+
+  // Reset free email confirmation when email changes
+  useEffect(() => {
+    setHasConfirmedFreeEmail(false);
+    setShowWorkEmailWarning(false);
+  }, [email]);
 
   const validateEmail = (email: string) => {
     return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+  };
+
+  const isFreeEmailDomain = (email: string): boolean => {
+    if (!email || !email.includes('@')) return false;
+    const domain = email.split('@')[1]?.toLowerCase();
+    return FREE_EMAIL_DOMAINS.includes(domain);
   };
 
   const showToast = (message: string, type: 'success' | 'error') => {
@@ -41,6 +76,15 @@ export default function FinalCTA() {
       return;
     }
 
+    // Time-to-submit check
+    if (formShownAt) {
+      const elapsedMs = Date.now() - formShownAt;
+      if (elapsedMs < 2500) {
+        showToast('Please take a moment to review your details and try again.', 'error');
+        return;
+      }
+    }
+
     // Validation
     if (!name.trim() || !email.trim() || !description.trim()) {
       showToast('Please fill in all fields.', 'error');
@@ -50,6 +94,20 @@ export default function FinalCTA() {
     if (!validateEmail(email)) {
       showToast('Please enter a valid email address.', 'error');
       return;
+    }
+
+    // Free email domain check
+    if (isFreeEmailDomain(email)) {
+      if (!showWorkEmailWarning) {
+        // First click - show warning, don't submit
+        setShowWorkEmailWarning(true);
+        return;
+      }
+      if (!hasConfirmedFreeEmail) {
+        // Second click - confirm and allow submission
+        setHasConfirmedFreeEmail(true);
+        // Continue to submission below
+      }
     }
 
     setStatus('submitting');
@@ -73,6 +131,8 @@ export default function FinalCTA() {
         setName('');
         setEmail('');
         setDescription('');
+        setShowWorkEmailWarning(false);
+        setHasConfirmedFreeEmail(false);
         setStatus('idle');
       } else {
         showToast('Something went wrong. Please try again.', 'error');
@@ -145,14 +205,21 @@ export default function FinalCTA() {
                   required
                   className="w-full px-4 py-3 rounded-xl border border-[var(--stroke)] bg-white text-[var(--ink)] placeholder:text-[var(--muted)] focus:outline-none focus:ring-2 focus:ring-[var(--accent)]"
                 />
-                <input
-                  type="email"
-                  placeholder="name@organisation.com"
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                  required
-                  className="w-full px-4 py-3 rounded-xl border border-[var(--stroke)] bg-white text-[var(--ink)] placeholder:text-[var(--muted)] focus:outline-none focus:ring-2 focus:ring-[var(--accent)]"
-                />
+                <div>
+                  <input
+                    type="email"
+                    placeholder="name@organisation.com"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                    required
+                    className="w-full px-4 py-3 rounded-xl border border-[var(--stroke)] bg-white text-[var(--ink)] placeholder:text-[var(--muted)] focus:outline-none focus:ring-2 focus:ring-[var(--accent)]"
+                  />
+                  {showWorkEmailWarning && (
+                    <p className="text-xs text-[var(--muted)] mt-1 text-left">
+                      For programme requests, please use a work email where possible.
+                    </p>
+                  )}
+                </div>
                 <textarea
                   placeholder="Tell us about your organisation, the type of programme you're considering, and any specific requirements."
                   rows={4}
