@@ -62,7 +62,7 @@ export const metadata: Metadata = {
     url: `${siteUrl}/`,
     images: [
       {
-        url: `${siteUrl}/og/step-up-og.png`,
+        url: `${siteUrl}/images/step-up_social.png`,
         width: 1200,
         height: 630,
         alt: 'Step-Up - Public health and workplace wellbeing programmes',
@@ -73,7 +73,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Step-Up | Public health and workplace wellbeing programmes powered by GameLayer',
     description: 'Step-Up helps organisations run community-driven walking programmes with team-based engagement, recognition, and rewards. Designed for public health initiatives, workplaces, universities, and local authorities to encourage everyday movement through inclusive, low-pressure challenges.',
-    images: [`${siteUrl}/og/step-up-og.png`],
+    images: [`${siteUrl}/images/step-up_social.png`],
   },
 }
 
