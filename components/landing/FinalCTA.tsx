@@ -21,6 +21,7 @@ const FREE_EMAIL_DOMAINS = [
 
 export default function FinalCTA() {
   const [name, setName] = useState('');
+  const [organisation, setOrganisation] = useState('');
   const [email, setEmail] = useState('');
   const [description, setDescription] = useState('');
   const [honeypot, setHoneypot] = useState('');
@@ -86,7 +87,7 @@ export default function FinalCTA() {
     }
 
     // Validation
-    if (!name.trim() || !email.trim() || !description.trim()) {
+    if (!name.trim() || !organisation.trim() || !email.trim() || !description.trim()) {
       showToast('Please fill in all fields.', 'error');
       return;
     }
@@ -121,6 +122,7 @@ export default function FinalCTA() {
         },
         body: JSON.stringify({
           name: name.trim(),
+          organisation: organisation.trim(),
           email: email.trim(),
           description: description.trim(),
         }),
@@ -129,6 +131,7 @@ export default function FinalCTA() {
       if (response.ok) {
         showToast('Success! We will review your request and get back to you shortly.', 'success');
         setName('');
+        setOrganisation('');
         setEmail('');
         setDescription('');
         setShowWorkEmailWarning(false);
@@ -202,6 +205,14 @@ export default function FinalCTA() {
                   placeholder="Your name"
                   value={name}
                   onChange={(e) => setName(e.target.value)}
+                  required
+                  className="w-full px-4 py-3 rounded-xl border border-[var(--stroke)] bg-white text-[var(--ink)] placeholder:text-[var(--muted)] focus:outline-none focus:ring-2 focus:ring-[var(--accent)]"
+                />
+                <input
+                  type="text"
+                  placeholder="Organisation"
+                  value={organisation}
+                  onChange={(e) => setOrganisation(e.target.value)}
                   required
                   className="w-full px-4 py-3 rounded-xl border border-[var(--stroke)] bg-white text-[var(--ink)] placeholder:text-[var(--muted)] focus:outline-none focus:ring-2 focus:ring-[var(--accent)]"
                 />
