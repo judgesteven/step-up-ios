@@ -38,9 +38,6 @@ export default function HowItWorks() {
             <p className="text-lg text-[var(--muted)] max-w-2xl mx-auto">
               Step-Up is designed to make physical activity part of everyday life — in ways that feel achievable, supportive, and inclusive for everyone.
             </p>
-            <p className="text-sm text-[var(--muted)] max-w-2xl mx-auto mt-3">
-              Activity is tracked automatically via Apple Health (HealthKit) to ensure accurate and consistent step data.
-            </p>
           </div>
           
           {/* Progress strip */}
@@ -99,6 +96,10 @@ export default function HowItWorks() {
               ))}
             </div>
           </div>
+          
+          <p className="text-sm text-[var(--muted)] max-w-2xl mx-auto mt-8 text-center">
+            Activity is tracked automatically via Apple Health (HealthKit) to ensure accurate and consistent step data.
+          </p>
         </div>
       </Container>
     </section>
