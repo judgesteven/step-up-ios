@@ -47,8 +47,32 @@ export default function LandingPage() {
         {/* Footer */}
         <footer className="py-8 border-t border-[var(--stroke)] bg-[var(--surface)]">
           <Container>
-            <div className="text-center text-base text-[var(--ink)]">
-              <p>2026 Step-Up - Powered by GameLayer</p>
+            <div className="space-y-4">
+              {/* Logo and Company Name */}
+              <div className="flex items-center justify-center gap-2 mb-4">
+                <img 
+                  src="/images/gamelayer_logo.png" 
+                  alt="GameLayer" 
+                  className="h-6 w-auto"
+                />
+                <span className="text-base font-semibold text-[var(--ink)]">GameLayer</span>
+              </div>
+              
+              {/* Company Registration */}
+              <div className="text-center text-sm text-[var(--ink)]">
+                <p>Company Registration 2503589-01 FINLAND</p>
+              </div>
+              
+              {/* Copyright and Contact */}
+              <div className="flex flex-col md:flex-row items-center justify-between text-sm text-[var(--ink)] gap-2">
+                <p>© 2012 - 2025 All rights reserved</p>
+                <a 
+                  href="mailto:contact@gamelayer.co" 
+                  className="hover:opacity-80 transition-opacity"
+                >
+                  Contact Us - contact@gamelayer.co
+                </a>
+              </div>
             </div>
           </Container>
         </footer>
