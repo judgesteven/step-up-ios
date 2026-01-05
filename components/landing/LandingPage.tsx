@@ -17,7 +17,7 @@ export default function LandingPage() {
       <div className="max-w-[1200px] mx-auto my-8 md:my-12 bg-[var(--surface)] rounded-3xl border border-[var(--stroke)] overflow-hidden">
         <SiteHeader />
         <main>
-          <section id="top" className="pt-[56px]">
+          <section className="pt-[56px]">
             <Hero />
           </section>
           <section className="py-[72px]">
