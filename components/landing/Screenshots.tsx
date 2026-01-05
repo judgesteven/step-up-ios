@@ -24,7 +24,7 @@ export default function Screenshots() {
   ];
 
   return (
-    <section>
+    <section id="screenshots">
       <Container>
         <div className="text-center mb-20">
           <h2 className="text-4xl md:text-5xl font-bold mb-4">How Step-Up keeps people moving</h2>
