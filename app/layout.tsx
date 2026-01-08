@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import { Analytics } from '@vercel/analytics/next'
 import './globals.css'
 
 const siteUrl = (process.env.NEXT_PUBLIC_SITE_URL || 'https://stepup.gamelayer.io').replace(/\/$/, '')
@@ -185,6 +186,7 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
         />
         {children}
+        <Analytics />
       </body>
     </html>
   )
